@@ -1,0 +1,11 @@
+.song-create-container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin-top: 10px;
+  cursor: pointer;
+}

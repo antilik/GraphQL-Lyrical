@@ -1,6 +1,19 @@
+.songs-container {
+  width: 100%;
+  max-width: 500px;
+  min-width: 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.songs-container__float-btn {
+  margin: 10px 10px 0;
+}
+
 .song-list__container {
   margin: 20px;
-
 }
 
 .song-list__item {
@@ -9,4 +22,10 @@
   padding: 20px;
   border-radius: 4px;
   max-width: 500px;
+}
+
+.song-list__item .icon-transform {
+  cursor: pointer;
+  transform: rotateZ(45deg);
+  margin-left: 0;
 }
