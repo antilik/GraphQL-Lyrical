@@ -26,6 +26,5 @@
 
 .song-list__item .icon-transform {
   cursor: pointer;
-  transform: rotateZ(45deg);
   margin-left: 0;
 }

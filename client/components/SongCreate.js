@@ -12,9 +12,9 @@ class SongCreate extends Component {
       title: "",
     };
   }
+
   onSubmitFunc(e) {
     e.preventDefault();
-    console.log("this.props >>>>>>>>>>", this.props);
 
     this.props
       .mutate({
@@ -22,7 +22,7 @@ class SongCreate extends Component {
         refetchQueries: [{ query: songsList }],
       })
       .then(() => hashHistory.push("/"))
-      .catch((e) => console.log("e >>>>>>>>>>", e));
+      .catch((e) => console.log("e : ", e));
   }
 
   render() {
@@ -33,6 +33,7 @@ class SongCreate extends Component {
         <form onSubmit={(e) => this.onSubmitFunc(e)}>
           <label>Song Title:</label>
           <input
+            autoFocus
             onChange={(e) => this.setState({ title: e.target.value })}
             value={this.state.title}
           />

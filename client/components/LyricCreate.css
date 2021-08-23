@@ -1,0 +1,11 @@
+.form-lyrics {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.input-add-lyric {
+  min-width: 100px;
+  max-width: 400px;
+}

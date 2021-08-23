@@ -7,25 +7,29 @@ import { songsList, deleteSong } from "../queries/fetchSongs";
 import "./SongList.css";
 
 class SongList extends Component {
-  deleteHandler(id) {
-    this.props.mutate({
-      variables: { id: id },
-      refetchQueries: [{ query: songsList }],
-    });
+  deleteSongHandler(id) {
+    this.props
+      .mutate({
+        variables: { id },
+      })
+      .then(() => this.props.data.refetch())
+      .catch((e) => console.log("e: ", e));
   }
 
   renderSongs() {
     return (
       this.props.data.songs.length &&
-      this.props.data.songs.map((song) => {
+      this.props.data.songs.map(({ id, title }) => {
         return (
-          <li key={song.id} className="song-list__item">
-            <span>{song.title}</span>
+          <li key={id} className="song-list__item">
+            <Link to={`/songs/${id}`}>
+              <span>{title}</span>
+            </Link>
             <i
-              onClick={(e) => this.deleteHandler(song.id)}
+              onClick={() => this.deleteSongHandler(id)}
               className="material-icons right icon-transform"
             >
-              add
+              delete
             </i>
           </li>
         );
