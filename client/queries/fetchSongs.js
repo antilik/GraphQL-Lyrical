@@ -3,8 +3,8 @@ import gql from "graphql-tag";
 export const songsList = gql`
   {
     songs {
-      title
       id
+      title
     }
   }
 `;
@@ -28,8 +28,8 @@ export const fetchSong = gql`
 export const addSong = gql`
   mutation AddSong($title: String) {
     addSong(title: $title) {
-      title
       id
+      title
     }
   }
 `;
@@ -52,6 +52,16 @@ export const addLyric = gql`
         likes
         content
       }
+    }
+  }
+`;
+
+export const likeLyric = gql`
+  mutation LikeLyric($id: ID) {
+    likeLyric(id: $id) {
+      id
+      likes
+      content
     }
   }
 `;
