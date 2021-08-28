@@ -13,7 +13,7 @@ class SongDetail extends Component {
     if (!song) {
       return <div>Loading data...</div>;
     }
-    console.log("song", song);
+
     return (
       <div>
         <Link to="/">Back</Link>

@@ -1,3 +1,17 @@
+.collection-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vote-box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
 .custom-thumb-up {
   cursor: pointer;
+  margin-right: 5px;
 }

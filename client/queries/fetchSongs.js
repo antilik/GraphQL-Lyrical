@@ -49,8 +49,8 @@ export const addLyric = gql`
       id
       lyrics {
         id
-        likes
         content
+        likes
       }
     }
   }
@@ -61,7 +61,6 @@ export const likeLyric = gql`
     likeLyric(id: $id) {
       id
       likes
-      content
     }
   }
 `;
